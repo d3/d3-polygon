@@ -1,13 +1,10 @@
 {
   "name": "d3-polygon",
   "version": "0.0.1",
-  "description": "Utilities for two-dimensional polygons.",
+  "description": "Operations for two-dimensional polygons.",
   "keywords": [
     "d3",
-    "graphics",
-    "visualization",
-    "canvas",
-    "svg"
+    "graphics"
   ],
   "homepage": "https://github.com/d3/d3-polygon",
   "license": "BSD-3-Clause",
