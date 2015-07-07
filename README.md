@@ -14,7 +14,7 @@ Returns the signed area of the specified *polygon*. If the vertices of the polyg
 
 <a href="#centroid" name="centroid">#</a> <b>centroid</b>(<i>polygon</i>)
 
-Returns the [centroid](https://en.wikipedia.org/wiki/Centroid) of the specified *polygon*. The optional *k*
+Returns the [centroid](https://en.wikipedia.org/wiki/Centroid) of the specified *polygon*.
 
 ## Changes from D3 3.x:
 
