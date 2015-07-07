@@ -11,5 +11,5 @@ export default function(polygon) {
     area += a[1] * b[0] - a[0] * b[1];
   }
 
-  return area * .5;
+  return area / 2;
 };
