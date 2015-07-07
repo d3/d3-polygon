@@ -16,6 +16,10 @@ Returns the signed area of the specified *polygon*. If the vertices of the polyg
 
 Returns the [centroid](https://en.wikipedia.org/wiki/Centroid) of the specified *polygon*.
 
+<a href="#perimeter" name="perimeter">#</a> <b>perimeter</b>(<i>polygon</i>)
+
+Returns the perimeter of the specified *polygon*.
+
 ## Changes from D3 3.x:
 
 * The d3.geom.polygon API is replaced with standalone [area](#area) and [centroid](#centroid) functions.
