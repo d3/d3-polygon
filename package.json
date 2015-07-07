@@ -1,0 +1,35 @@
+{
+  "name": "d3-polygon",
+  "version": "0.0.1",
+  "description": "Utilities for two-dimensional polygons.",
+  "keywords": [
+    "d3",
+    "graphics",
+    "visualization",
+    "canvas",
+    "svg"
+  ],
+  "homepage": "https://github.com/d3/d3-polygon",
+  "license": "BSD-3-Clause",
+  "author": {
+    "name": "Mike Bostock",
+    "url": "http://bost.ocks.org/mike"
+  },
+  "main": "build/polygon",
+  "jsnext:main": "index",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/d3/d3-polygon.git"
+  },
+  "scripts": {
+    "pretest": "mkdir -p build && d3-bundler --format=umd --name=polygon -- index.js > build/polygon.js",
+    "test": "faucet `find test -name '*-test.js'`",
+    "prepublish": "npm run test && uglifyjs build/polygon.js -c -m -o build/polygon.min.js && rm -f build/polygon.zip && zip -j build/polygon.zip -- LICENSE README.md build/polygon.js build/polygon.min.js"
+  },
+  "devDependencies": {
+    "d3-bundler": "~0.2.5",
+    "faucet": "0.0",
+    "tape": "4",
+    "uglify-js": "2"
+  }
+}
