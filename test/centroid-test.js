@@ -32,6 +32,6 @@ tape("polygon.centroid(polygon) returns the expected value for a very large poly
   for (var value = 0; value < stop; value += step) points.push([value, stop]);
   for (var value = stop - step; value >= 0; value -= step) points.push([stop, value]);
   for (var value = stop - step; value >= 0; value -= step) points.push([value, 0]);
-  test.deepEqual(polygon.centroid(points), [49999999.75000188, 49999999.75001217]);
+  test.deepEqual(polygon.centroid(points), [49999999.75000187, 49999999.75001216]);
   test.end();
 });
