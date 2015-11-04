@@ -1,9 +1,3 @@
-import area from "./src/area";
-import centroid from "./src/centroid";
-import perimeter from "./src/perimeter";
-
-export {
-  area,
-  centroid,
-  perimeter
-};
+export {default as area} from "./src/area";
+export {default as centroid} from "./src/centroid";
+export {default as perimeter} from "./src/perimeter";
