@@ -1,6 +1,6 @@
 {
   "name": "d3-polygon",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Operations for two-dimensional polygons.",
   "keywords": [
     "d3",
@@ -12,20 +12,20 @@
     "name": "Mike Bostock",
     "url": "http://bost.ocks.org/mike"
   },
-  "main": "build/polygon.cjs",
+  "main": "build/d3-polygon.js",
   "jsnext:main": "index",
   "repository": {
     "type": "git",
     "url": "https://github.com/d3/d3-polygon.git"
   },
   "scripts": {
-    "pretest": "mkdir -p build && d3-bundler -x -f cjs -o build/polygon.cjs.js",
+    "pretest": "mkdir -p build && node -e 'process.stdout.write(\"var version = \\\"\" + require(\"./package.json\").version + \"\\\"; export * from \\\"../index\\\"; export {version};\");' > build/bundle.js && rollup -f umd -u d3-polygon -n d3_polygon -o build/d3-polygon.js -- build/bundle.js",
     "test": "faucet `find test -name '*-test.js'`",
-    "prepublish": "npm run test && d3-bundler -n polygon -o build/polygon.js && uglifyjs build/polygon.js -c -m -o build/polygon.min.js && rm -f build/polygon.zip && zip -j build/polygon.zip -- LICENSE README.md build/polygon.js build/polygon.min.js"
+    "prepublish": "npm run test && uglifyjs build/d3-polygon.js -c -m -o build/d3-polygon.min.js && rm -f build/d3-polygon.zip && zip -j build/d3-polygon.zip -- LICENSE README.md build/d3-polygon.js build/d3-polygon.min.js"
   },
   "devDependencies": {
-    "d3-bundler": "~0.4.0",
     "faucet": "0.0",
+    "rollup": "0.20.5",
     "tape": "4",
     "uglify-js": "2"
   }
