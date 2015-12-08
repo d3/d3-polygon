@@ -16,6 +16,12 @@ Returns the signed area of the specified *polygon*. If the vertices of the polyg
 
 Returns the [centroid](https://en.wikipedia.org/wiki/Centroid) of the specified *polygon*.
 
+<a href="#hull" name="hull">#</a> <b>hull</b>(<i>points</i>)
+
+<a href="http://bl.ocks.org/mbostock/6f14f7b7f267a85f7cdc"><img src="https://raw.githubusercontent.com/d3/d3-polygon/master/img/hull.png" width="250" height="250"></a>
+
+Returns the [convex hull](https://en.wikipedia.org/wiki/Convex_hull) of the specified *points* using [Andrew’s monotone chain algorithm](http://en.wikibooks.org/wiki/Algorithm_Implementation/Geometry/Convex_hull/Monotone_chain). The returned hull is represented as an array containing a subset of the input *points* arranged in counterclockwise order. Returns null if *points* has fewer than three elements.
+
 <a href="#inside" name="inside">#</a> <b>inside</b>(<i>polygon</i>, <i>point</i>)
 
 Returns true if and only if the specified *point* is [inside the specified *polygon*](https://www.ecse.rpi.edu/Homepages/wrf/Research/Short_Notes/pnpoly.html).

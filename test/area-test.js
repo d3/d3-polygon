@@ -1,29 +1,29 @@
 var tape = require("tape"),
     polygon = require("../");
 
-tape("polygon.area(polygon) returns the expected value for closed counterclockwise polygons", function(test) {
+tape("area(polygon) returns the expected value for closed counterclockwise polygons", function(test) {
   test.equal(polygon.area([[0, 0], [0, 1], [1, 1], [1, 0], [0, 0]]), 1);
   test.end();
 });
 
-tape("polygon.area(polygon) returns the expected value for closed clockwise polygons", function(test) {
+tape("area(polygon) returns the expected value for closed clockwise polygons", function(test) {
   test.equal(polygon.area([[0, 0], [1, 0], [1, 1], [0, 1], [0, 0]]), -1);
   test.equal(polygon.area([[1, 1], [3, 2], [2, 3], [1, 1]]), -1.5);
   test.end();
 });
 
-tape("polygon.area(polygon) returns the expected value for open counterclockwise polygons", function(test) {
+tape("area(polygon) returns the expected value for open counterclockwise polygons", function(test) {
   test.equal(polygon.area([[0, 0], [0, 1], [1, 1], [1, 0]]), 1);
   test.end();
 });
 
-tape("polygon.area(polygon) returns the expected value for open clockwise polygons", function(test) {
+tape("area(polygon) returns the expected value for open clockwise polygons", function(test) {
   test.equal(polygon.area([[0, 0], [1, 0], [1, 1], [0, 1]]), -1);
   test.equal(polygon.area([[1, 1], [3, 2], [2, 3]]), -1.5);
   test.end();
 });
 
-tape("polygon.area(polygon) returns the expected value for a very large polygon", function(test) {
+tape("area(polygon) returns the expected value for a very large polygon", function(test) {
   var start = 0,
       stop = 1e8,
       step = 1e4,
