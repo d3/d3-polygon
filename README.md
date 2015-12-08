@@ -16,6 +16,10 @@ Returns the signed area of the specified *polygon*. If the vertices of the polyg
 
 Returns the [centroid](https://en.wikipedia.org/wiki/Centroid) of the specified *polygon*.
 
+<a href="#inside" name="inside">#</a> <b>inside</b>(<i>polygon</i>, <i>point</i>)
+
+Returns true if and only if the specified *point* is [inside the specified *polygon*](https://www.ecse.rpi.edu/Homepages/wrf/Research/Short_Notes/pnpoly.html).
+
 <a href="#perimeter" name="perimeter">#</a> <b>perimeter</b>(<i>polygon</i>)
 
 Returns the perimeter of the specified *polygon*.
