@@ -7,31 +7,31 @@ This module provides a few basic geometric operations for two-dimensional polygo
 If you use NPM, `npm install d3-polygon`. Otherwise, download the [latest release](https://github.com/d3/d3-polygon/releases/latest). The released bundle supports AMD, CommonJS, and vanilla environments. Create a custom build using [Rollup](https://github.com/rollup/rollup) or your preferred bundler. You can also load directly from [d3js.org](https://d3js.org):
 
 ```html
-<script src="https://d3js.org/d3-polygon.v0.1.min.js"></script>
+<script src="https://d3js.org/d3-polygon.v0.2.min.js"></script>
 ```
 
 In a vanilla environment, a `d3_polygon` global is exported. [Try d3-polygon in your browser.](https://tonicdev.com/npm/d3-polygon)
 
 ## API Reference
 
-<a href="#area" name="area">#</a> d3_polygon.<b>area</b>(<i>polygon</i>)
+<a href="#polygonArea" name="polygonArea">#</a> d3.<b>polygonArea</b>(<i>polygon</i>)
 
 Returns the signed area of the specified *polygon*. If the vertices of the polygon are in counterclockwise order (assuming a coordinate system where the origin ⟨0,0⟩ is in the top-left corner), the returned area is positive; otherwise it is negative, or zero.
 
-<a href="#centroid" name="centroid">#</a> d3_polygon.<b>centroid</b>(<i>polygon</i>)
+<a href="#polygonCentroid" name="polygonCentroid">#</a> d3.<b>polygonCentroid</b>(<i>polygon</i>)
 
 Returns the [centroid](https://en.wikipedia.org/wiki/Centroid) of the specified *polygon*.
 
-<a href="#hull" name="hull">#</a> d3_polygon.<b>hull</b>(<i>points</i>)
+<a href="#polygonHull" name="polygonHull">#</a> d3.<b>polygonHull</b>(<i>points</i>)
 
 <a href="http://bl.ocks.org/mbostock/6f14f7b7f267a85f7cdc"><img src="https://raw.githubusercontent.com/d3/d3-polygon/master/img/hull.png" width="250" height="250"></a>
 
 Returns the [convex hull](https://en.wikipedia.org/wiki/Convex_hull) of the specified *points* using [Andrew’s monotone chain algorithm](http://en.wikibooks.org/wiki/Algorithm_Implementation/Geometry/Convex_hull/Monotone_chain). The returned hull is represented as an array containing a subset of the input *points* arranged in counterclockwise order. Returns null if *points* has fewer than three elements.
 
-<a href="#inside" name="inside">#</a> d3_polygon.<b>inside</b>(<i>polygon</i>, <i>point</i>)
+<a href="#polygonContains" name="polygonContains">#</a> d3.<b>polygonContains</b>(<i>polygon</i>, <i>point</i>)
 
 Returns true if and only if the specified *point* is [inside the specified *polygon*](https://www.ecse.rpi.edu/Homepages/wrf/Research/Short_Notes/pnpoly.html).
 
-<a href="#perimeter" name="perimeter">#</a> d3_polygon.<b>perimeter</b>(<i>polygon</i>)
+<a href="#polygonLength" name="polygonLength">#</a> d3.<b>polygonLength</b>(<i>polygon</i>)
 
 Returns the length of the perimeter of the specified *polygon*.

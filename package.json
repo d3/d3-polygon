@@ -1,9 +1,12 @@
 {
   "name": "d3-polygon",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Operations for two-dimensional polygons.",
   "keywords": [
     "d3",
+    "polygon",
+    "hull",
+    "geometry",
     "graphics"
   ],
   "homepage": "https://github.com/d3/d3-polygon",

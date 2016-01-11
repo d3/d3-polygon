@@ -1,5 +1,5 @@
-export {default as area} from "./src/area";
-export {default as centroid} from "./src/centroid";
-export {default as hull} from "./src/hull";
-export {default as inside} from "./src/inside";
-export {default as perimeter} from "./src/perimeter";
+export {default as polygonArea} from "./src/area";
+export {default as polygonCentroid} from "./src/centroid";
+export {default as polygonHull} from "./src/hull";
+export {default as polygonContains} from "./src/contains";
+export {default as polygonLength} from "./src/length";
