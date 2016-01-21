@@ -17,4 +17,4 @@ export default function(polygon) {
   }
 
   return k *= 3, [x / k, y / k];
-};
+}

@@ -13,4 +13,4 @@ export default function(polygon, point) {
   }
 
   return inside;
-};
+}

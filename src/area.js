@@ -12,4 +12,4 @@ export default function(polygon) {
   }
 
   return area / 2;
-};
+}
