@@ -1,4 +1,3 @@
-export {version} from "./build/package";
 export {default as polygonArea} from "./src/area";
 export {default as polygonCentroid} from "./src/centroid";
 export {default as polygonHull} from "./src/hull";

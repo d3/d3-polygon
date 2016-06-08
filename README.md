@@ -4,13 +4,13 @@ This module provides a few basic geometric operations for two-dimensional polygo
 
 ## Installing
 
-If you use NPM, `npm install d3-polygon`. Otherwise, download the [latest release](https://github.com/d3/d3-polygon/releases/latest). You can also load directly from [d3js.org](https://d3js.org), either as a [standalone library](https://d3js.org/d3-polygon.v0.2.min.js) or as part of [D3 4.0](https://github.com/d3/d3). AMD, CommonJS, and vanilla environments are supported. In vanilla, a `d3_polygon` global is exported:
+If you use NPM, `npm install d3-polygon`. Otherwise, download the [latest release](https://github.com/d3/d3-polygon/releases/latest). You can also load directly from [d3js.org](https://d3js.org), either as a [standalone library](https://d3js.org/d3-polygon.v0.3.min.js) or as part of [D3 4.0](https://github.com/d3/d3). AMD, CommonJS, and vanilla environments are supported. In vanilla, a `d3` global is exported:
 
 ```html
-<script src="https://d3js.org/d3-polygon.v0.2.min.js"></script>
+<script src="https://d3js.org/d3-polygon.v0.3.min.js"></script>
 <script>
 
-var hull = d3_polygon.polygonHull(points);
+var hull = d3.polygonHull(points);
 
 </script>
 ```
