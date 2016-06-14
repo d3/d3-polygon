@@ -4,6 +4,7 @@
   "description": "Operations for two-dimensional polygons.",
   "keywords": [
     "d3",
+    "d3-module",
     "polygon",
     "hull",
     "geometry",
