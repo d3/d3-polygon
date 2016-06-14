@@ -1,6 +1,6 @@
 {
   "name": "d3-polygon",
-  "version": "0.3.0",
+  "version": "1.0.0",
   "description": "Operations for two-dimensional polygons.",
   "keywords": [
     "d3",
