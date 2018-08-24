@@ -24,14 +24,14 @@ tape("polygonCentroid(points) returns the expected value for closed counterclock
 });
 
 tape("polygonCentroid(polygon) returns the expected value for a very large polygon", function(test) {
-  var start = 0,
-      stop = 1e8,
+  var stop = 1e8,
       step = 1e4,
-      points = [];
-  for (var value = 0; value < stop; value += step) points.push([0, value]);
-  for (var value = 0; value < stop; value += step) points.push([value, stop]);
-  for (var value = stop - step; value >= 0; value -= step) points.push([stop, value]);
-  for (var value = stop - step; value >= 0; value -= step) points.push([value, 0]);
+      points = [],
+      value;
+  for (value = 0; value < stop; value += step) points.push([0, value]);
+  for (value = 0; value < stop; value += step) points.push([value, stop]);
+  for (value = stop - step; value >= 0; value -= step) points.push([stop, value]);
+  for (value = stop - step; value >= 0; value -= step) points.push([value, 0]);
   test.deepEqual(polygon.polygonCentroid(points), [49999999.75000187, 49999999.75001216]);
   test.end();
 });
