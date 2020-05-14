@@ -17,7 +17,7 @@ tape("polygonCentroid(points) returns the expected value for open counterclockwi
   test.end();
 });
 
-tape("polygonCentroid(points) returns the expected value for closed counterclockwise polygons", function(test) {
+tape("polygonCentroid(points) returns the expected value for open counterclockwise polygons", function(test) {
   test.deepEqual(polygon.polygonCentroid([[0, 0], [1, 0], [1, 1], [0, 1]]), [.5, .5]);
   test.deepEqual(polygon.polygonCentroid([[1, 1], [3, 2], [2, 3]]), [2, 2]);
   test.end();
