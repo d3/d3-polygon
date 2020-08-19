@@ -16,7 +16,7 @@ export default function(polygon) {
     yb = b[1];
     xa -= xb;
     ya -= yb;
-    perimeter += Math.sqrt(xa * xa + ya * ya);
+    perimeter += Math.hypot(xa, ya);
   }
 
   return perimeter;

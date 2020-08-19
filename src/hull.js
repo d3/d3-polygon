@@ -8,11 +8,11 @@ function lexicographicOrder(a, b) {
 // Assumes points.length >= 3, is sorted by x, unique in y.
 // Returns an array of indices into points in left-to-right order.
 function computeUpperHullIndexes(points) {
-  var n = points.length,
-      indexes = [0, 1],
-      size = 2;
+  const n = points.length,
+      indexes = [0, 1];
+  let size = 2, i;
 
-  for (var i = 2; i < n; ++i) {
+  for (i = 2; i < n; ++i) {
     while (size > 1 && cross(points[indexes[size - 2]], points[indexes[size - 1]], points[i]) <= 0) --size;
     indexes[size++] = i;
   }
