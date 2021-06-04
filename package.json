@@ -1,6 +1,6 @@
 {
   "name": "d3-polygon",
-  "version": "2.0.0",
+  "version": "3.0.0",
   "description": "Operations for two-dimensional polygons.",
   "homepage": "https://d3js.org/d3-polygon/",
   "repository": {
