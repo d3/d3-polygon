@@ -1,32 +1,31 @@
 import assert from "assert";
-import * as d3 from "../src/index.js";
+import {polygonCentroid} from "../src/index.js";
 
 it("polygonCentroid(points) returns the expected value for closed counterclockwise polygons", () => {
-  assert.deepStrictEqual(d3.polygonCentroid([[0, 0], [0, 1], [1, 1], [1, 0], [0, 0]]), [.5, .5]);
+  assert.deepStrictEqual(polygonCentroid([[0, 0], [0, 1], [1, 1], [1, 0], [0, 0]]), [0.5, 0.5]);
 });
 
 it("polygonCentroid(points) returns the expected value for closed clockwise polygons", () => {
-  assert.deepStrictEqual(d3.polygonCentroid([[0, 0], [1, 0], [1, 1], [0, 1], [0, 0]]), [.5, .5]);
-  assert.deepStrictEqual(d3.polygonCentroid([[1, 1], [3, 2], [2, 3], [1, 1]]), [2, 2]);
+  assert.deepStrictEqual(polygonCentroid([[0, 0], [1, 0], [1, 1], [0, 1], [0, 0]]), [0.5, 0.5]);
+  assert.deepStrictEqual(polygonCentroid([[1, 1], [3, 2], [2, 3], [1, 1]]), [2, 2]);
 });
 
 it("polygonCentroid(points) returns the expected value for open counterclockwise polygons", () => {
-  assert.deepStrictEqual(d3.polygonCentroid([[0, 0], [0, 1], [1, 1], [1, 0]]), [.5, .5]);
+  assert.deepStrictEqual(polygonCentroid([[0, 0], [0, 1], [1, 1], [1, 0]]), [0.5, 0.5]);
 });
 
 it("polygonCentroid(points) returns the expected value for open counterclockwise polygons", () => {
-  assert.deepStrictEqual(d3.polygonCentroid([[0, 0], [1, 0], [1, 1], [0, 1]]), [.5, .5]);
-  assert.deepStrictEqual(d3.polygonCentroid([[1, 1], [3, 2], [2, 3]]), [2, 2]);
+  assert.deepStrictEqual(polygonCentroid([[0, 0], [1, 0], [1, 1], [0, 1]]), [0.5, 0.5]);
+  assert.deepStrictEqual(polygonCentroid([[1, 1], [3, 2], [2, 3]]), [2, 2]);
 });
 
 it("polygonCentroid(polygon) returns the expected value for a very large polygon", () => {
-  var stop = 1e8,
-      step = 1e4,
-      points = [],
-      value;
-  for (value = 0; value < stop; value += step) points.push([0, value]);
-  for (value = 0; value < stop; value += step) points.push([value, stop]);
-  for (value = stop - step; value >= 0; value -= step) points.push([stop, value]);
-  for (value = stop - step; value >= 0; value -= step) points.push([value, 0]);
-  assert.deepStrictEqual(d3.polygonCentroid(points), [49999999.75000187, 49999999.75001216]);
+  const stop = 1e8;
+  const step = 1e4;
+  const points = [];
+  for (let value = 0; value < stop; value += step) points.push([0, value]);
+  for (let value = 0; value < stop; value += step) points.push([value, stop]);
+  for (let value = stop - step; value >= 0; value -= step) points.push([stop, value]);
+  for (let value = stop - step; value >= 0; value -= step) points.push([value, 0]);
+  assert.deepStrictEqual(polygonCentroid(points), [49999999.75000187, 49999999.75001216]);
 });
