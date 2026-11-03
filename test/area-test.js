@@ -1,25 +1,26 @@
+import {test} from "vitest";
 import assert from "assert";
 import {polygonArea} from "../src/index.js";
 
-it("polygonArea(polygon) returns the expected value for closed counterclockwise polygons", () => {
+test("polygonArea(polygon) returns the expected value for closed counterclockwise polygons", () => {
   assert.strictEqual(polygonArea([[0, 0], [0, 1], [1, 1], [1, 0], [0, 0]]), 1);
 });
 
-it("polygonArea(polygon) returns the expected value for closed clockwise polygons", () => {
+test("polygonArea(polygon) returns the expected value for closed clockwise polygons", () => {
   assert.strictEqual(polygonArea([[0, 0], [1, 0], [1, 1], [0, 1], [0, 0]]), -1);
   assert.strictEqual(polygonArea([[1, 1], [3, 2], [2, 3], [1, 1]]), -1.5);
 });
 
-it("polygonArea(polygon) returns the expected value for open counterclockwise polygons", () => {
+test("polygonArea(polygon) returns the expected value for open counterclockwise polygons", () => {
   assert.strictEqual(polygonArea([[0, 0], [0, 1], [1, 1], [1, 0]]), 1);
 });
 
-it("polygonArea(polygon) returns the expected value for open clockwise polygons", () => {
+test("polygonArea(polygon) returns the expected value for open clockwise polygons", () => {
   assert.strictEqual(polygonArea([[0, 0], [1, 0], [1, 1], [0, 1]]), -1);
   assert.strictEqual(polygonArea([[1, 1], [3, 2], [2, 3]]), -1.5);
 });
 
-it("polygonArea(polygon) returns the expected value for a very large polygon", () => {
+test("polygonArea(polygon) returns the expected value for a very large polygon", () => {
   const stop = 1e8;
   const step = 1e4;
   const points = [];
