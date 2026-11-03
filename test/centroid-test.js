@@ -1,5 +1,5 @@
+import assert from "node:assert";
 import {it} from "vitest";
-import assert from "assert";
 import {polygonCentroid} from "../src/index.js";
 
 it("polygonCentroid(points) returns the expected value for closed counterclockwise polygons", () => {

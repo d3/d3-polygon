@@ -1,5 +1,5 @@
+import assert from "node:assert";
 import {it} from "vitest";
-import assert from "assert";
 import {polygonArea} from "../src/index.js";
 
 it("polygonArea(polygon) returns the expected value for closed counterclockwise polygons", () => {

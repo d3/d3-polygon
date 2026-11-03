@@ -1,5 +1,5 @@
+import assert from "node:assert";
 import {it} from "vitest";
-import assert from "assert";
 import {polygonHull} from "../src/index.js";
 
 it("polygonHull(points) returns null if points has fewer than three elements", () => {

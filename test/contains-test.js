@@ -1,5 +1,5 @@
+import assert from "node:assert";
 import {it} from "vitest";
-import assert from "assert";
 import {polygonContains} from "../src/index.js";
 
 it("polygonContains(polygon, point) returns the expected value for closed counterclockwise polygons", () => {
