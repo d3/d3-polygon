@@ -1,4 +1,5 @@
-import assert from "assert";
+import assert from "node:assert";
+import {it} from "vitest";
 import {polygonLength} from "../src/index.js";
 
 it("polygonLength(polygon) returns the expected value for closed counterclockwise polygons", () => {
