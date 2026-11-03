@@ -1,8 +1,8 @@
-import {test} from "vitest";
+import {it} from "vitest";
 import assert from "assert";
 import {polygonContains} from "../src/index.js";
 
-test("polygonContains(polygon, point) returns the expected value for closed counterclockwise polygons", () => {
+it("polygonContains(polygon, point) returns the expected value for closed counterclockwise polygons", () => {
   assert.strictEqual(polygonContains([[0, 0], [0, 1], [1, 1], [1, 0], [0, 0]], [0.5, 0.5]), true);
   assert.strictEqual(polygonContains([[0, 0], [0, 1], [1, 1], [1, 0], [0, 0]], [1.5, 0.5]), false);
   assert.strictEqual(polygonContains([[0, 0], [0, 1], [1, 1], [1, 0], [0, 0]], [-0.5, 0.5]), false);
@@ -10,16 +10,16 @@ test("polygonContains(polygon, point) returns the expected value for closed coun
   assert.strictEqual(polygonContains([[0, 0], [0, 1], [1, 1], [1, 0], [0, 0]], [0.5, -0.5]), false);
 });
 
-test("polygonContains(polygon, point) returns the expected value for closed clockwise polygons", () => {
+it("polygonContains(polygon, point) returns the expected value for closed clockwise polygons", () => {
   assert.strictEqual(polygonContains([[0, 0], [1, 0], [1, 1], [0, 1], [0, 0]], [0.5, 0.5]), true);
   assert.strictEqual(polygonContains([[1, 1], [3, 2], [2, 3], [1, 1]], [1.5, 1.5]), true);
 });
 
-test("polygonContains(polygon, point) returns the expected value for open counterclockwise polygons", () => {
+it("polygonContains(polygon, point) returns the expected value for open counterclockwise polygons", () => {
   assert.strictEqual(polygonContains([[0, 0], [0, 1], [1, 1], [1, 0]], [0.5, 0.5]), true);
 });
 
-test("polygonContains(polygon, point) returns the expected value for open clockwise polygons", () => {
+it("polygonContains(polygon, point) returns the expected value for open clockwise polygons", () => {
   assert.strictEqual(polygonContains([[0, 0], [1, 0], [1, 1], [0, 1]], [0.5, 0.5]), true);
   assert.strictEqual(polygonContains([[1, 1], [3, 2], [2, 3]], [1.5, 1.5]), true);
 });
